@@ -1,0 +1,36 @@
+#keyboard {
+    height: 300px;
+}
+
+
+/* White Keys */
+.whiteKey {
+    background-color: #f8f9fa;
+    width: 6.67%;
+}
+
+#C5 {
+    background-color: #f8f9fa;
+    width: 6.6%;
+}
+
+
+
+/* Black Keys */
+.blackKey {
+    background-color: #343a40;
+    width: 4%;
+    height: 60%;
+}
+
+#Db3 { left: 4.5%; }
+#Eb3 { left: 11.5%; }
+#Gb3 { left: 24.5%; }
+#Ab3 { left: 31.5%; }
+#Bb3 { left: 38.5% }
+
+#Db4 { left: 51.2%; }
+#Eb4 { left: 58.2%; }
+#Gb4 { left: 71.2%; }
+#Ab4 { left: 78.2%; }
+#Bb4 { left: 85.2% }
