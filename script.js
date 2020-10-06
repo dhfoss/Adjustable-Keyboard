@@ -27,19 +27,85 @@ $(document).ready(function() {
     // var aContext;
     // var osc;
 
-    var aContext;
-    var osc;
+    
+
+
+
+
+
+
+
+
+    // var aContextA3;
+    // var oscA3;
+
+    // var aContextA4;
+    // var oscA4;
+
+
+    $('#A3').on('mousedown', function() {
+        if ($('#A3').hasClass('off')) {
+            // window.aContextA3 creates a global variable stored within the window...I think.
+            window.aContextA3 = new window.AudioContext();
+            window.oscA3 = aContextA3.createOscillator();
+            oscA3.connect(aContextA3.destination);
+            oscA3.frequency.value = "220";
+            oscA3.start();
+            $('#A3').removeClass('off');
+            $('#A3').addClass('on');
+        } else
+        if ($('#A3').hasClass('on')) {
+            oscA3.stop();
+            $('#A3').removeClass('on');
+            $('#A3').addClass('off');
+        }
+    });
+
+    $('#Db4').on('mousedown', function() {
+        if ($('#Db4').hasClass('off')) {
+            window.aContextDb4 = new window.AudioContext();
+            window.oscDb4 = aContextDb4.createOscillator();
+            oscDb4.connect(aContextDb4.destination);
+            oscDb4.frequency.value = "275";
+            oscDb4.start();
+            $('#Db4').removeClass('off');
+            $('#Db4').addClass('on');
+        } else
+        if ($('#Db4').hasClass('on')) {
+            oscDb4.stop();
+            $('#Db4').removeClass('on');
+            $('#Db4').addClass('off');
+        }
+    });
+
+    $('#E4').on('mousedown', function() {
+        if ($('#E4').hasClass('off')) {
+            window.aContextE4 = new window.AudioContext();
+            window.oscE4 = aContextE4.createOscillator();
+            oscE4.connect(aContextE4.destination);
+            oscE4.frequency.value = "330";
+            oscE4.start();
+            $('#E4').removeClass('off');
+            $('#E4').addClass('on');
+        } else
+        if ($('#E4').hasClass('on')) {
+            oscE4.stop();
+            $('#E4').removeClass('on');
+            $('#E4').addClass('off');
+        }
+    });
+    
     $('#A4').on('mousedown', function() {
         if ($('#A4').hasClass('off')) {
-            aContext = new window.AudioContext();
-            osc = aContext.createOscillator();
-            osc.connect(aContext.destination);
-            osc.start();
+            window.aContextA4 = new window.AudioContext();
+            window.oscA4 = aContextA4.createOscillator();
+            oscA4.connect(aContextA4.destination);
+            oscA4.start();
             $('#A4').removeClass('off');
             $('#A4').addClass('on');
         } else
         if ($('#A4').hasClass('on')) {
-            osc.stop();
+            oscA4.stop();
             $('#A4').removeClass('on');
             $('#A4').addClass('off');
         }
@@ -48,22 +114,7 @@ $(document).ready(function() {
 
 
 
-    $('#A3').on('mousedown', function() {
-        if ($('#A3').hasClass('off')) {
-            aContext = new window.AudioContext();
-            osc = aContext.createOscillator();
-            osc.connect(aContext.destination);
-            osc.frequency.value = "220";
-            osc.start();
-            $('#A3').removeClass('off');
-            $('#A3').addClass('on');
-        } else
-        if ($('#A3').hasClass('on')) {
-            osc.stop();
-            $('#A3').removeClass('on');
-            $('#A3').addClass('off');
-        }
-    });
+
 
 
 
